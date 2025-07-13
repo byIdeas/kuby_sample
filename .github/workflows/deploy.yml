@@ -25,7 +25,7 @@ jobs:
 
       - name: Pull down the latest docker image
         run: |
-          docker pull ruby:3.0.1 --quiet
+          docker pull ruby:3.3.5 --quiet
           docker pull node:12.14.1 --quiet
           docker pull nginx:1.9-alpine --quiet
 
