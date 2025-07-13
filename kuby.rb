@@ -1,5 +1,6 @@
 require "active_support/core_ext"
 require "active_support/encrypted_configuration"
+require 'kuby/digitalocean'
 
 # Define a production Kuby deploy environment
 Kuby.define("App") do
@@ -21,6 +22,8 @@ Kuby.define("App") do
         username app_creds[:DIGITALOCEAN_API_TOKEN]
         password app_creds[:DIGITALOCEAN_API_TOKEN]
       end
+
+      distro :alpine
 
       # Configure the URL to your Docker image here, eg:
       image_url "registry.digitalocean.com/fedicom/sample-app"
