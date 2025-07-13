@@ -20,7 +20,11 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url: <%= ENV['DATABASE_URL'] %>
+#  url: <%#= ENV['DATABASE_URL'] %>
+  host: <%= ENV['MYSQL_MAESTRO_ADDRESS'] || 'localhost'%>
+  database: <%= ENV['MYSQL_MAESTRO_DATABASE'] || 'App_development' %>
+  username: <%= ENV['MYSQL_MAESTRO_USERNAME'] || 'manuel' %>
+  password: <%= ENV['MYSQL_MAESTRO_PASSWORD'] || 'rootrootroot' %>
 
 development:
   <<: *default

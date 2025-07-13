@@ -23,13 +23,13 @@ Kuby.define("App") do
       end
 
       # Configure the URL to your Docker image here, eg:
-      image_url "registry.digitalocean.com/mikerogers0/sample-app"
+      image_url "registry.digitalocean.com/fedicom/sample-app"
     end
 
     kubernetes do
       # Add a plugin that facilitates deploying a Rails app.
       add_plugin :rails_app do
-        hostname "sample-app.mikerogers.io"
+        hostname "209.38.182.239"
 
         manage_database false
 
@@ -42,7 +42,7 @@ Kuby.define("App") do
 
       provider :digitalocean do
         access_token app_creds[:DIGITALOCEAN_API_TOKEN]
-        cluster_id "ae71564d-7986-43ed-aa20-af7a45858ce1"
+        cluster_id "001a0275-6469-44d8-9d0c-208b0455e3e5"
       end
     end
   end

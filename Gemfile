@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-ruby "3.0.1"
+ruby "3.3.5"
 
 gem "barnes", "~> 0.0.8"
 gem "bootsnap", ">= 1.4.4", require: false
@@ -9,7 +9,7 @@ gem "lograge", "~> 0.11.2"
 gem "pg", "~> 1.1"
 gem "premailer-rails", "~> 1.11"
 gem "puma", "~> 5.0"
-gem "rails", "~> 6.1.4"
+gem "rails", "~> 6.1.7.10"
 gem "redis", "~> 4.2"
 gem "sass-rails", ">= 6"
 gem "sentry-raven", "~> 3.1"
@@ -17,7 +17,9 @@ gem "sidekiq", "~> 6.1"
 gem "sidekiq-cron", "~> 1.2"
 gem "turbolinks", "~> 5"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
-gem "webpacker", "~> 5.0"
+# gem "webpacker", "~> 5.0"
+gem 'webpacker', '~> 5.4'
+gem "concurrent-ruby", "1.3.4"
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
@@ -42,6 +44,5 @@ group :test do
   gem "webdrivers"
 end
 
-gem "kuby-core", "~> 0.12.0"
-
-gem "kuby-digitalocean", "~> 0.4.3"
+gem "kuby-core"
+gem "kuby-digitalocean"
