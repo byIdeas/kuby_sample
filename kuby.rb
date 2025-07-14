@@ -1,6 +1,7 @@
 require "active_support/core_ext"
 require "active_support/encrypted_configuration"
 require 'kuby/digitalocean'
+require 'kuby/sidekiq'
 
 # Define a production Kuby deploy environment
 Kuby.define("App") do
