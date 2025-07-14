@@ -46,3 +46,4 @@ end
 
 gem "kuby-core"
 gem "kuby-digitalocean"
+gem 'kuby-sidekiq'

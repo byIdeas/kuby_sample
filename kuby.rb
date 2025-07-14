@@ -43,6 +43,10 @@ Kuby.define("App") do
         end
       end
 
+      add_plugin(:sidekiq) do
+        replicas 2
+      end
+
       provider :digitalocean do
         access_token app_creds[:DIGITALOCEAN_API_TOKEN]
         cluster_id "001a0275-6469-44d8-9d0c-208b0455e3e5"
