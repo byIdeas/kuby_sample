@@ -23,7 +23,7 @@ Kuby.define("App") do
         password app_creds[:DIGITALOCEAN_API_TOKEN]
       end
 
-      distro :alpine
+      # distro :alpine
 
       # Configure the URL to your Docker image here, eg:
       image_url "registry.digitalocean.com/fedicom/sample-app"

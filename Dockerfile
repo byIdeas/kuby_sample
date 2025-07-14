@@ -18,6 +18,18 @@ RUN apk --no-cache add --virtual build-dependencies \
       # Fixes watch file issues with things like HMR
       libnotify-dev
 
+# Instalar todas las dependencias necesarias incluyendo PostgreSQL
+RUN apk add --no-cache \
+    ca-certificates \
+    build-base \
+    tzdata \
+    git \
+    postgresql-dev \
+    postgresql-client \
+    pkgconfig \
+    gnupg \
+     libpq-dev
+
 # Dockerize allows us to wait for other containers to be ready before we run our own code.
 ENV DOCKERIZE_VERSION v0.6.1
 RUN wget -nv https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
