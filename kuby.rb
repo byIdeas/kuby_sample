@@ -33,7 +33,7 @@ Kuby.define("App") do
     kubernetes do
       # Add a plugin that facilitates deploying a Rails app.
       add_plugin :rails_app do
-        hostname "bysite.me"
+        hostname "209.38.112.166"
 
         manage_database false
 
